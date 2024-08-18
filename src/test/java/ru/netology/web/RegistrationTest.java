@@ -1,6 +1,9 @@
 package ru.netology.web;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -12,6 +15,11 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.CollectionCondition.*;
 
 public class RegistrationTest {
+
+    @BeforeEach
+    void setUp() {
+        System.setProperty("selenide.headless", "true");
+    }
 
     @Test
     void shouldRegisterByAccountNumberDOMModification() {
