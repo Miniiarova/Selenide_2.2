@@ -15,12 +15,6 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.CollectionCondition.*;
 
 public class RegistrationTest {
-
-    @BeforeEach
-    void setUp() {
-        System.setProperty("selenide.headless", "true");
-    }
-
     @Test
     void shouldRegisterByAccountNumberDOMModification() {
         open("http://localhost:9999");
