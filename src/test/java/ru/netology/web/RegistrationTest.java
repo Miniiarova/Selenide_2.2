@@ -1,11 +1,8 @@
 package ru.netology.web;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -15,17 +12,6 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 
 public class RegistrationTest {
-    @BeforeEach
-    void setUp() {
-        ChromeOptions options = new ChromeOptions();
-
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--no-sandbox");
-
-        Configuration.browserCapabilities = options;
-    }
-
     @Test
     void shouldRegisterByAccountNumberDOMModification() {
         open("http://localhost:9999");
